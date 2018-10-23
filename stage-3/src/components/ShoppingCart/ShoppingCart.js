@@ -15,7 +15,7 @@ class ShoppingCart extends Component {
             <div className="shopping-cart-button-container">
               <button
                 className="shopping-cart-button"
-                onClick={() => this.props.removeFromShoppingCart(index)}
+                onClick={() => this.props.removeFromShoppingCart(element)}
               >
                 Remove From Shopping Cart
               </button>
@@ -47,5 +47,5 @@ function mapStateToProps(state) {
 
 export default connect(
   mapStateToProps,
-  removeFromShoppingCart
+  { removeFromShoppingCart }
 )(ShoppingCart);
